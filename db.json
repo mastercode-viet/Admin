@@ -1,6 +1,26 @@
 {
-  "products": [],
+  "products": [
+    {
+      "title": "Smartphones & Tablets update",
+      "price": "1000",
+      "categories": "1",
+      "status": "Còn hàng",
+      "description": "hTEh",
+      "id": 1
+    }
+  ],
   "variants": [],
   "carts": [],
-  "orders": []
+  "orders": [],
+  "blog-posts": [],
+  "categories": [
+    {
+      "title": "Nike ",
+      "id": 2
+    },
+    {
+      "title": "Nike update trogkgswagseg",
+      "id": 3
+    }
+  ]
 }

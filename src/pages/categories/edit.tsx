@@ -2,7 +2,9 @@ import { Edit, useForm } from "@refinedev/antd";
 import { Form, Input } from "antd";
 
 export const CategoryEdit = () => {
-  const { formProps, saveButtonProps } = useForm({});
+  const { formProps, saveButtonProps } = useForm({
+    resource: "categories",
+  });
 
   return (
     <Edit saveButtonProps={saveButtonProps}>
@@ -13,6 +15,7 @@ export const CategoryEdit = () => {
           rules={[
             {
               required: true,
+              message: "Title is required",
             },
           ]}
         >
