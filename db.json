@@ -13,5 +13,11 @@
   ],
   "variants": [],
   "carts": [],
+  "categories": [
+    {
+      "title": "Smartphones & Tablets update",
+      "id": 1
+    }
+  ],
   "orders": []
 }
