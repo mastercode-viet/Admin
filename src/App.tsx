@@ -150,15 +150,14 @@ function App() {
                       <Route path="edit/:id" element={<UserEdit />} />
                       <Route path="show/:id" element={<CategoryShow />} />
                     </Route>
-
-                    <Route path="/products">
-                      <Route index element={<ProductsList />} />
-                      <Route path="create" element={<ProductsCreate />} />
-                      <Route path="edit/:id" element={<ProductsEdit />} />
-                      <Route path="show/:id" element={<ProductsShow />} />
-                    </Route>
-                    <Route path="*" element={<ErrorComponent />} />
                   </Route>
+                  <Route path="/products">
+                    <Route index element={<ProductsList />} />
+                    <Route path="create" element={<ProductsCreate />} />
+                    <Route path="edit/:id" element={<ProductsEdit />} />
+                    <Route path="show/:id" element={<ProductsShow />} />
+                  </Route>
+                  <Route path="*" element={<ErrorComponent />} />
                   <Route
                     element={
                       <Authenticated
