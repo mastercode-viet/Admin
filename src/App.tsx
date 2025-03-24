@@ -58,6 +58,9 @@ function App() {
 
 
 
+              
+
+
                 dataProvider={dataProvider("http://localhost:3000")}
 
                 notificationProvider={useNotificationProvider}
@@ -152,7 +155,11 @@ function App() {
                       <Route path="create" element={<UserCreate />} />
                        <Route path="edit/:id" element={<UserEdit />} />
                        <Route path="show/:id" element={<CategoryShow />} /> 
+
                        </Route>
+
+
+
                     <Route path="/products">
                       <Route index element={<ProductsList />} />
                       <Route path="create" element={<ProductsCreate />} />
