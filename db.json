@@ -2,5 +2,34 @@
   "products": [],
   "variants": [],
   "carts": [],
-  "orders": []
+  "orders": [],
+  "blog_post": [],
+  "users": [
+    {
+      "email": "kkk@gmail.com",
+      "password": "$2a$10$DD2Y8MBMBpFNWZ4ubJC0y.2L3yAQ7R7yeYtfefg.22ETQPj8o9NM6",
+      "username": "rachviet",
+      "address": "ha noi ",
+      "phone": "0867031413",
+      "status": "Inactive",
+      "createdAt": "2025-03-24T08:42:19.393Z",
+      "id": 11
+    },
+    {
+      "email": "sdsddsds@dfdfd.ghf",
+      "password": "$2a$10$7QiAIYGVEPiDVDfOVWEkH.Jl3nB.IFiaOqXqFQzYriN7/IZHdrZ4y",
+      "username": "dfdsd",
+      "address": "sdssdsd",
+      "phone": "44545454545",
+      "status": "active",
+      "createdAt": "2025-03-24T08:50:33.371Z",
+      "id": 12
+    }
+  ],
+  "categories": [
+    {
+      "title": "laptop",
+      "id": 1
+    }
+  ]
 }

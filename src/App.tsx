@@ -37,6 +37,9 @@ import {
 import { ForgotPassword } from "./pages/forgotPassword";
 import { Login } from "./pages/login";
 import { Register } from "./pages/register";
+import { UserCreate } from "./pages/users/create";
+import { UsersList } from "./pages/users/list";
+import { UserEdit } from "./pages/users";
 
 function App() {
   return (
@@ -47,7 +50,7 @@ function App() {
           <AntdApp>
             <DevtoolsProvider>
               <Refine
-                dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
+                dataProvider={dataProvider('http://localhost:3000')}
                 notificationProvider={useNotificationProvider}
                 routerProvider={routerBindings}
                 authProvider={authProvider}
@@ -71,7 +74,19 @@ function App() {
                     meta: {
                       canDelete: true,
                     },
+                    
                   },
+                  {
+                    
+                      name: "users",
+                      list: "/users",
+                      create: "/users/create",
+                      edit: "/users/edit/:id",
+                      show: "/users/show/:id",
+                      meta: {
+                        canDelete: true,
+                      },
+                  }
                 ]}
                 options={{
                   syncWithLocation: true,
@@ -111,6 +126,12 @@ function App() {
                       <Route path="create" element={<CategoryCreate />} />
                       <Route path="edit/:id" element={<CategoryEdit />} />
                       <Route path="show/:id" element={<CategoryShow />} />
+                    </Route>
+                    <Route path="/users">
+                      <Route index element={<UsersList />} />
+                      <Route path="create" element={<UserCreate />} />
+                       <Route path="edit/:id" element={<UserEdit />} />
+                       <Route path="show/:id" element={<CategoryShow />} /> 
                     </Route>
                     <Route path="*" element={<ErrorComponent />} />
                   </Route>
