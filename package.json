@@ -41,7 +41,8 @@
     "build": "tsc && refine build",
     "start": "refine start",
     "server": "nodemon json-sv-ext.js --watch",
-    "refine": "refine"
+    "refine": "refine",
+    "db": "json-server --watch db.json --port 3000"
   },
   "browserslist": {
     "production": [
