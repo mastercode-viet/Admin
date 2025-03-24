@@ -42,20 +42,12 @@ import { UserCreate } from "./pages/users/create";
 import { UsersList } from "./pages/users/list";
 import { UserEdit } from "./pages/users";
 
-import { ProductsList, ProductsCreate, ProductsEdit, ProductsShow } from "./pages/products";
-
-
-
-=======
-
 import {
+  ProductsList,
   ProductsCreate,
   ProductsEdit,
-  ProductsList,
   ProductsShow,
 } from "./pages/products";
-
-
 
 function App() {
   return (
@@ -66,10 +58,7 @@ function App() {
           <AntdApp>
             <DevtoolsProvider>
               <Refine
-
-
                 dataProvider={dataProvider("http://localhost:3000")}
-
                 notificationProvider={useNotificationProvider}
                 routerProvider={routerBindings}
                 authProvider={authProvider}
@@ -103,19 +92,17 @@ function App() {
                     meta: {
                       canDelete: true,
                     },
-                    
                   },
                   {
-                    
-                      name: "users",
-                      list: "/users",
-                      create: "/users/create",
-                      edit: "/users/edit/:id",
-                      show: "/users/show/:id",
-                      meta: {
-                        canDelete: true,
-                      },
-                  }
+                    name: "users",
+                    list: "/users",
+                    create: "/users/create",
+                    edit: "/users/edit/:id",
+                    show: "/users/show/:id",
+                    meta: {
+                      canDelete: true,
+                    },
+                  },
                 ]}
                 options={{
                   syncWithLocation: true,
@@ -160,24 +147,17 @@ function App() {
                     <Route path="/users">
                       <Route index element={<UsersList />} />
                       <Route path="create" element={<UserCreate />} />
-                       <Route path="edit/:id" element={<UserEdit />} />
-                       <Route path="show/:id" element={<CategoryShow />} /> 
-
-
-                       </Route>
-
-
-
-
-                    <Route path="/products">
-                      <Route index element={<ProductsList />} />
-                      <Route path="create" element={<ProductsCreate />} />
-                      <Route path="edit/:id" element={<ProductsEdit />} />
-                      <Route path="show/:id" element={<ProductsShow />} />
-
+                      <Route path="edit/:id" element={<UserEdit />} />
+                      <Route path="show/:id" element={<CategoryShow />} />
                     </Route>
-                    <Route path="*" element={<ErrorComponent />} />
                   </Route>
+                  <Route path="/products">
+                    <Route index element={<ProductsList />} />
+                    <Route path="create" element={<ProductsCreate />} />
+                    <Route path="edit/:id" element={<ProductsEdit />} />
+                    <Route path="show/:id" element={<ProductsShow />} />
+                  </Route>
+                  <Route path="*" element={<ErrorComponent />} />
                   <Route
                     element={
                       <Authenticated
@@ -209,6 +189,5 @@ function App() {
     </BrowserRouter>
   );
 }
-
 
 export default App;
