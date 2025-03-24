@@ -1,5 +1,16 @@
 {
-  "products": [],
+  "products": [
+    {
+      "id": 1,
+      "title": "Thêm mới sản phẩm",
+      "price": "17.960.000",
+      "categories": "2",
+      "status": "false",
+      "description": "Mô tả sản phẩm ",
+      "type": "simple",
+      "parent": 0
+    }
+  ],
   "variants": [],
   "carts": [],
   "orders": [],
