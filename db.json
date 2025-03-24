@@ -1,14 +1,12 @@
 {
   "products": [
     {
-      "id": 1,
-      "title": "Thêm mới sản phẩm",
-      "price": "17.960.000",
-      "categories": "2",
-      "status": "false",
-      "description": "Mô tả sản phẩm ",
-      "type": "simple",
-      "parent": 0
+      "title": "babadsds",
+      "price": "838383",
+      "categories": "1",
+      "status": "Hết hàng",
+      "description": "sdasdad",
+      "id": 2
     }
   ],
   "variants": [],
@@ -17,6 +15,8 @@
   "blog_post": [],
   "users": [
     {
+
+
       "email": "kkk@gmail.com",
       "password": "$2a$10$DD2Y8MBMBpFNWZ4ubJC0y.2L3yAQ7R7yeYtfefg.22ETQPj8o9NM6",
       "username": "rachviet",
@@ -27,6 +27,7 @@
       "id": 11
     },
     {
+
       "email": "sdsddsds@dfdfd.ghf",
       "password": "$2a$10$7QiAIYGVEPiDVDfOVWEkH.Jl3nB.IFiaOqXqFQzYriN7/IZHdrZ4y",
       "username": "dfdsd",

@@ -42,12 +42,19 @@ import { UserCreate } from "./pages/users/create";
 import { UsersList } from "./pages/users/list";
 import { UserEdit } from "./pages/users";
 
+import { ProductsList, ProductsCreate, ProductsEdit, ProductsShow } from "./pages/products";
+
+
+
+=======
+
 import {
   ProductsCreate,
   ProductsEdit,
   ProductsList,
   ProductsShow,
 } from "./pages/products";
+
 
 
 function App() {
@@ -60,7 +67,6 @@ function App() {
             <DevtoolsProvider>
               <Refine
 
-              
 
                 dataProvider={dataProvider("http://localhost:3000")}
 
@@ -157,6 +163,12 @@ function App() {
                        <Route path="edit/:id" element={<UserEdit />} />
                        <Route path="show/:id" element={<CategoryShow />} /> 
 
+
+                       </Route>
+
+
+
+
                     <Route path="/products">
                       <Route index element={<ProductsList />} />
                       <Route path="create" element={<ProductsCreate />} />
@@ -197,5 +209,6 @@ function App() {
     </BrowserRouter>
   );
 }
+
 
 export default App;
