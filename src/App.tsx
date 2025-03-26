@@ -46,14 +46,8 @@ import { ProductsList, ProductsCreate, ProductsEdit, ProductsShow } from "./page
 
 
 
-=======
 
-import {
-  ProductsCreate,
-  ProductsEdit,
-  ProductsList,
-  ProductsShow,
-} from "./pages/products";
+
 
 
 
