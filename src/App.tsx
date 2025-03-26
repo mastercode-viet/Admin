@@ -40,7 +40,10 @@ import { Register } from "./pages/register";
 
 import { UserCreate } from "./pages/users/create";
 import { UsersList } from "./pages/users/list";
-import { UserEdit } from "./pages/users";
+
+
+
+import { UserEdit, UserShow } from "./pages/users";
 
 import { ProductsList, ProductsCreate, ProductsEdit, ProductsShow } from "./pages/products";
 
@@ -155,14 +158,8 @@ function App() {
                       <Route index element={<UsersList />} />
                       <Route path="create" element={<UserCreate />} />
                        <Route path="edit/:id" element={<UserEdit />} />
-                       <Route path="show/:id" element={<CategoryShow />} /> 
-
-
+                       <Route path="show/:id" element={<UserShow />} /> 
                        </Route>
-
-
-
-
                     <Route path="/products">
                       <Route index element={<ProductsList />} />
                       <Route path="create" element={<ProductsCreate />} />
