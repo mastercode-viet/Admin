@@ -9,13 +9,21 @@
       "description": "Mô tả sản phẩm ",
       "type": "simple",
       "parent": 0
+    },
+    {
+      "title": "Smartphones & Tablets update",
+      "price": "1000",
+      "categories": "2",
+      "status": "Còn hàng",
+      "description": "xbxfd",
+      "id": 2
     }
   ],
   "variants": [],
   "carts": [],
   "categories": [
     {
-      "title": "Smartphones & Tablets update",
+      "title": "Smartphones & Tablets",
       "id": 1
     }
   ],
