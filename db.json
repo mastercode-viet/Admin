@@ -15,8 +15,6 @@
   "blog_post": [],
   "users": [
     {
-
-
       "email": "kkk@gmail.com",
       "password": "$2a$10$DD2Y8MBMBpFNWZ4ubJC0y.2L3yAQ7R7yeYtfefg.22ETQPj8o9NM6",
       "username": "rachviet",
@@ -27,7 +25,6 @@
       "id": 11
     },
     {
-
       "email": "sdsddsds@dfdfd.ghf",
       "password": "$2a$10$7QiAIYGVEPiDVDfOVWEkH.Jl3nB.IFiaOqXqFQzYriN7/IZHdrZ4y",
       "username": "dfdsd",
@@ -44,7 +41,7 @@
       "id": 1
     },
     {
-      "title": "laptop ",
+      "title": "laptop 1",
       "id": 2
     }
   ]
