@@ -1,31 +1,51 @@
 {
   "products": [
     {
-      "id": 1,
-      "title": "Thêm mới sản phẩm",
-      "price": "17.960.000",
-      "categories": "2",
-      "status": "false",
-      "description": "Mô tả sản phẩm ",
-      "type": "simple",
-      "parent": 0
-    },
-    {
-      "title": "Smartphones & Tablets update",
-      "price": "1000",
-      "categories": "2",
-      "status": "Còn hàng",
-      "description": "xbxfd",
+      "title": "babadsds",
+      "price": "838383",
+      "categories": "1",
+      "status": "Hết hàng",
+      "description": "sdasdad",
       "id": 2
     }
   ],
   "variants": [],
   "carts": [],
-  "categories": [
+  "orders": [],
+  "blog_post": [],
+  "users": [
     {
-      "title": "Smartphones & Tablets",
-      "id": 1
+
+
+      "email": "kkk@gmail.com",
+      "password": "$2a$10$DD2Y8MBMBpFNWZ4ubJC0y.2L3yAQ7R7yeYtfefg.22ETQPj8o9NM6",
+      "username": "rachviet",
+      "address": "ha noi ",
+      "phone": "0867031413",
+      "status": "Inactive",
+      "createdAt": "2025-03-24T08:42:19.393Z",
+      "id": 11
+    },
+    {
+
+      "email": "sdsddsds@dfdfd.ghf",
+      "password": "$2a$10$7QiAIYGVEPiDVDfOVWEkH.Jl3nB.IFiaOqXqFQzYriN7/IZHdrZ4y",
+      "username": "dfdsd",
+      "address": "sdssdsd",
+      "phone": "44545454545",
+      "status": "active",
+      "createdAt": "2025-03-24T08:50:33.371Z",
+      "id": 12
     }
   ],
-  "orders": []
+  "categories": [
+    {
+      "title": "laptop",
+      "id": 1
+    },
+    {
+      "title": "laptop ",
+      "id": 2
+    }
+  ]
 }
