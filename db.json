@@ -37,6 +37,10 @@
   ],
   "categories": [
     {
+      "title": "laptop 11",
+      "id": 1
+    },
+    {
       "title": "laptop 1",
       "id": 2
     }
