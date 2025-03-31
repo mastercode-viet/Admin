@@ -78,6 +78,18 @@ function App() {
                       canDelete: true,
                     },
                   },
+
+
+                  {
+                    name: "users",
+                    list: "/users",
+                    create: "/users/create",
+                    edit: "/users/edit/:id",
+                    show: "/users/show/:id",
+                    meta: {
+                      canDelete: true,
+                    },
+                  },
                 ]}
                 options={{
                   syncWithLocation: true,
@@ -126,21 +138,37 @@ function App() {
                       <Route path="edit/:id" element={<CategoryEdit />} />
                       <Route path="show/:id" element={<CategoryShow />} />
                     </Route>
-                    <Route path="users">
-                      <Route index element={<UsersList />} />
-                      <Route path="create" element={<UserCreate />} />
-                      <Route path="edit/:id" element={<UserEdit />} />
-                      <Route path="show/:id" element={<UserShow />} />
-                    </Route>
-                    <Route path="products">
-                      <Route index element={<ProductsList />} />
-                      <Route path="create" element={<ProductsCreate />} />
-                      <Route path="edit/:id" element={<ProductsEdit />} />
-                      <Route path="show/:id" element={<ProductsShow />} />
-                    </Route>
+                    
+
                     <Route path="dashboard" element={<Dashboard />} />
                     <Route path="*" element={<ErrorComponent />} />
                   </Route>
+                  </Route>
+                  <Route path="/products">
+                    <Route index element={<ProductsList />} />
+                    <Route path="create" element={<ProductsCreate />} />
+                    <Route path="edit/:id" element={<ProductsEdit />} />
+                    <Route path="show/:id" element={<ProductsShow />} />
+                  </Route>
+                  <Route path="*" element={<ErrorComponent />} />
+                  <Route
+                    element={
+                      <Authenticated
+                        key="authenticated-outer"
+                        fallback={<Outlet />}
+                      >
+                        <NavigateToResource />
+                      </Authenticated>
+                    }
+                  >
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route
+                      path="/forgot-password"
+                      element={<ForgotPassword />}
+                    />
+                  </Route>
+
                 </Routes>
 
                 <RefineKbar />
@@ -156,5 +184,7 @@ function App() {
   )
 }
 
-export default App
+
+
+export default App;
 
