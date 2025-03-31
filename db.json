@@ -7,6 +7,26 @@
       "status": "Hết hàng",
       "description": "sdasdad",
       "id": 2
+    },
+    {
+      "id": 3,
+      "title": "Abc 1213",
+      "price": "1212.5334",
+      "categories": "1",
+      "status": "Còn hàng",
+      "description": "abcdef",
+      "type": "simple",
+      "parent": 0
+    },
+    {
+      "id": 4,
+      "title": "sản phẩm 1 ",
+      "price": "123.222.222",
+      "categories": "2",
+      "status": "Còn hàng",
+      "description": "abc",
+      "type": "simple",
+      "parent": 0
     }
   ],
   "variants": [],
@@ -33,6 +53,16 @@
       "status": "active",
       "createdAt": "2025-03-24T08:50:33.371Z",
       "id": 12
+    },
+    {
+      "email": "ldung9807@gmail.com",
+      "password": "$2a$10$hM7FV2HVyK8tVl.E11RNdOFtAInvt7oW4PIwHyJl3oH2TVGZj43qW",
+      "username": "gau130113",
+      "address": "dsvsdvsdjsjdjd112121",
+      "phone": "08670314134",
+      "status": "active",
+      "createdAt": "2025-03-28T07:59:38.732Z",
+      "id": 13
     }
   ],
   "categories": [
@@ -43,6 +73,10 @@
     {
       "title": "laptop 1",
       "id": 2
+    },
+    {
+      "title": "Samater1",
+      "id": 3
     }
   ]
 }
