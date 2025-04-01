@@ -17,7 +17,7 @@ import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom"
 import { authProvider } from "./authProvider"
 import { Header } from "./components/header"
 import { ColorModeContextProvider } from "./contexts/color-mode"
-import { BlogPostCreate, BlogPostEdit, BlogPostList, BlogPostShow } from "./pages/blog-posts"
+
 import { CategoryCreate, CategoryEdit, CategoryList, CategoryShow } from "./pages/categories"
 import { ForgotPassword } from "./pages/forgotPassword"
 import { Login } from "./pages/login"
@@ -34,9 +34,7 @@ import { Dashboard } from "./pages/dashboard/dashboard";
 
 function App() {
   return (
-    
     <BrowserRouter>
-     
       <RefineKbarProvider>
         <ColorModeContextProvider>
           <AntdApp>
@@ -47,7 +45,6 @@ function App() {
                 routerProvider={routerBindings}
                 authProvider={authProvider}
                 resources={[
-                  
                   {
                     name: "products",
                     list: "/admin/products",
@@ -78,18 +75,6 @@ function App() {
                       canDelete: true,
                     },
                   },
-
-
-                  {
-                    name: "users",
-                    list: "/users",
-                    create: "/users/create",
-                    edit: "/users/edit/:id",
-                    show: "/users/show/:id",
-                    meta: {
-                      canDelete: true,
-                    },
-                  },
                 ]}
                 options={{
                   syncWithLocation: true,
@@ -99,7 +84,6 @@ function App() {
                 }}
               >
                 <Routes>
-                
                   <Route element={<LayoutClient />}>
                     <Route index element={<HomePage />} />
                     <Route path="/home" element={<h1>Home</h1>} />
@@ -107,20 +91,6 @@ function App() {
                     <Route path="/products/:id" element={<Detail />} />
                   </Route>
 
-                
-                  <Route
-                    element={
-                      <Authenticated key="authenticated-outer" fallback={<Outlet />}>
-                        <NavigateToResource resource="productsproducts" />
-                      </Authenticated>
-                    }
-                  >
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/register" element={<Register />} />
-                    <Route path="/forgot-password" element={<ForgotPassword />} />
-                  </Route>
-
-                  {/* Admin routes - all under /admin prefix */}
                   <Route
                     path="/admin/*"
                     element={
@@ -138,37 +108,26 @@ function App() {
                       <Route path="edit/:id" element={<CategoryEdit />} />
                       <Route path="show/:id" element={<CategoryShow />} />
                     </Route>
-                    
-
+                    <Route path="users">
+                      <Route index element={<UsersList />} />
+                      <Route path="create" element={<UserCreate />} />
+                      <Route path="edit/:id" element={<UserEdit />} />
+                      <Route path="show/:id" element={<UserShow />} />
+                    </Route>
+                    <Route path="products">
+                      <Route index element={<ProductsList />} />
+                      <Route path="create" element={<ProductsCreate />} />
+                      <Route path="edit/:id" element={<ProductsEdit />} />
+                      <Route path="show/:id" element={<ProductsShow />} />
+                    </Route>
                     <Route path="dashboard" element={<Dashboard />} />
                     <Route path="*" element={<ErrorComponent />} />
                   </Route>
-                  </Route>
-                  <Route path="/products">
-                    <Route index element={<ProductsList />} />
-                    <Route path="create" element={<ProductsCreate />} />
-                    <Route path="edit/:id" element={<ProductsEdit />} />
-                    <Route path="show/:id" element={<ProductsShow />} />
-                  </Route>
-                  <Route path="*" element={<ErrorComponent />} />
-                  <Route
-                    element={
-                      <Authenticated
-                        key="authenticated-outer"
-                        fallback={<Outlet />}
-                      >
-                        <NavigateToResource />
-                      </Authenticated>
-                    }
-                  >
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/register" element={<Register />} />
-                    <Route
-                      path="/forgot-password"
-                      element={<ForgotPassword />}
-                    />
-                  </Route>
 
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/register" element={<Register />} />
+                  <Route path="/forgot-password" element={<ForgotPassword />} />
+                  <Route path="*" element={<ErrorComponent />} />
                 </Routes>
 
                 <RefineKbar />
@@ -183,8 +142,6 @@ function App() {
     </BrowserRouter>
   )
 }
-
-
 
 export default App;
 
