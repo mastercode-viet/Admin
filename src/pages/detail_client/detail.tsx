@@ -49,10 +49,8 @@ const Detail = () => {
                 <img src="https://cdn.builder.io/api/v1/image/assets/fade7a66245c4bb8b027677c62a79354/db13939cabd153a09de09c25864d1f622bda5d116dbe6552d6605aca283c27a4?placeholderIfAbsent=true" alt="Breadcrumb separator" className="object-contain w-5 aspect-square" />
                 <a href="#" className="hover:text-yellow-600">Shop</a>
                 <img src="https://cdn.builder.io/api/v1/image/assets/fade7a66245c4bb8b027677c62a79354/db13939cabd153a09de09c25864d1f622bda5d116dbe6552d6605aca283c27a4?placeholderIfAbsent=true" alt="Breadcrumb separator" className="object-contain w-5 aspect-square" />
-                <div className="shrink-0 self-start w-0.5 border-2 border-solid border-neutral-400 h-[37px]" />
-                <h2 className="grow shrink self-stretch my-auto text-black w-[1014px] max-md:max-w-full">
-                    Asgaard sofa
-                </h2>
+                <a href="#" className="hover:text-yellow-600"> {product.title || product.name}</a>
+                
             </nav>
             <div>
                 <main className="flex flex-col items-center px-20 pt-9 pb-14 w-full bg-white max-md:px-5 max-md:pb-24 max-md:max-w-full">
@@ -73,7 +71,7 @@ const Detail = () => {
                             </div>
                             <article className="ml-5 w-6/12 max-md:ml-0 max-md:w-full">
                                 <div className="flex flex-col items-start w-full max-md:mt-10 max-md:max-w-full">
-                                    <h1 className="text-5xl text-black mb-5">{product.name}</h1>
+                                    <h1 className="text-5xl text-black mb-5">{product.title || product.name}</h1>
                                     <p className="text-2xl font-medium text-neutral-400">{product.price}</p>
                                     <div className="flex gap-5 items-center mt-2.5 text-sm text-neutral-400">
                                         <img src="https://cdn.builder.io/api/v1/image/assets/fade7a66245c4bb8b027677c62a79354/35cb519968837ecbbf7790f3c128da597ab6c33dd10c0353875022f7f2dc3781?placeholderIfAbsent=true" alt="Rating stars" className="object-contain max-w-full aspect-[6.21] w-[124px]" />

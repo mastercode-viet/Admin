@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 // Navigation Arrow Component
 interface NavigationArrowProps {
@@ -86,6 +87,7 @@ const ContentBox: React.FC = () => {
 export const Navigation: React.FC = () => {
     const menuItems = ["Home", "Shop", "About", "Contact"];
     const categories = ["Furniture", "Lighting", "Decor", "Outdoor"];
+    const navigate = useNavigate(); // Initialize useNavigate
 
     return (
         <nav className="px-20 py-8 w-full bg-white shadow-md max-md:px-5 max-md:max-w-full">
@@ -140,7 +142,10 @@ export const Navigation: React.FC = () => {
                                 key={index}
                                 src={icon.src}
                                 alt={icon.alt}
-                                className="object-contain shrink-0 w-7 aspect-square"
+                                className="object-contain shrink-0 w-7 aspect-square cursor-pointer"
+                                onClick={() => {
+                                    if (index === 0) navigate("/login"); // Navigate to login for the first icon
+                                }}
                             />
                         ))}
                     </div>

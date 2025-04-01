@@ -15,6 +15,7 @@
       "categories": "1",
       "status": "Còn hàng",
       "description": "abcdef",
+      "imageUrl":"https://picsum.photos/200/300",
       "type": "simple",
       "parent": 0
     },
@@ -25,6 +26,18 @@
       "categories": "2",
       "status": "Còn hàng",
       "description": "abc",
+      "imageUrl":"https://picsum.photos/200/300",
+      "type": "simple",
+      "parent": 0
+    },
+    {
+      "id": 5,
+      "title": "Tra sua lơn",
+      "price": "199.000",
+      "categories": "2",
+      "imageUrl":"https://picsum.photos/200/300",
+      "status": "Còn hàng",
+      "description": "ok ",
       "type": "simple",
       "parent": 0
     }

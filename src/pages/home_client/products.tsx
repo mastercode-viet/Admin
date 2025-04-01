@@ -28,12 +28,18 @@ export const ProductGrid = () => {
                     <article
                         key={product.id}
                         className="relative w-full"
-                        onMouseEnter={() => setHoveredId(product.id)}
-                        onMouseLeave={() => setHoveredId(null)}
+                        onMouseEnter={() => setHoveredId(product.id)} // Set hovered product ID
+                        onMouseLeave={() => setHoveredId(null)} // Reset hovered product ID
                     >
                         <div className="relative mb-6 w-full h-[301px]">
-                            <img src={product.imageUrl} className="object-cover size-full transition-opacity duration-300 hover:opacity-70" />
-                            <div className={`absolute top-0 left-0 flex justify-center items-center bg-neutral-700 transition-opacity duration-300 size-full ${isHovered ? "opacity-75" : "opacity-0 pointer-events-none"
+                            <img
+                                src={product.imageUrl || "https://via.placeholder.com/300"} // Fallback image if no imageUrl
+                                alt={product.title}
+                                className="object-cover size-full transition-opacity duration-300 hover:opacity-70"
+                            />
+                            <div
+                                className={`absolute top-0 left-0 flex justify-center items-center bg-neutral-700 transition-opacity duration-300 size-full ${
+                                    isHovered === product.id ? "opacity-75" : "opacity-0 pointer-events-none"
                                 }`}
                             >
                                 <ProductActions />
