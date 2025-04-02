@@ -36,6 +36,15 @@ export const CategoryCreate = () => {
         >
           <Input />
         </Form.Item>
+        <Form.Item
+          label="Image"
+          name="image"
+          rules={[
+            { required: true, message: "Vui lòng nhập ảnh!" },
+          ]}
+        >
+          <Input />
+        </Form.Item>
       </Form>
     </Create>
   );

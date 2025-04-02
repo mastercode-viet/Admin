@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "title": "babadsds",
+      "title": "việt nguuu l**",
       "price": "838383",
       "categories": "1",
       "status": "Hết hàng",
@@ -15,7 +15,7 @@
       "categories": "1",
       "status": "Còn hàng",
       "description": "abcdef",
-      "imageUrl":"https://picsum.photos/200/300",
+      "imageUrl": "https://picsum.photos/200/300",
       "type": "simple",
       "parent": 0
     },
@@ -26,7 +26,7 @@
       "categories": "2",
       "status": "Còn hàng",
       "description": "abc",
-      "imageUrl":"https://picsum.photos/200/300",
+      "imageUrl": "https://picsum.photos/200/300",
       "type": "simple",
       "parent": 0
     },
@@ -35,11 +35,19 @@
       "title": "Tra sua lơn",
       "price": "199.000",
       "categories": "2",
-      "imageUrl":"https://picsum.photos/200/300",
+      "imageUrl": "https://picsum.photos/200/300",
       "status": "Còn hàng",
       "description": "ok ",
       "type": "simple",
       "parent": 0
+    },
+    {
+      "title": "Smartphones & Tablets update",
+      "price": "1000",
+      "categories": "4",
+      "status": "Còn hàng",
+      "description": "rất đẹp\n\n",
+      "id": 6
     }
   ],
   "variants": [],
@@ -80,16 +88,14 @@
   ],
   "categories": [
     {
-      "title": "laptop 11",
-      "id": 1
+      "title": "Smartphones & Tablets ",
+      "image": "https://picsum.photos/200/300",
+      "id": 4
     },
     {
-      "title": "laptop 1",
-      "id": 2
-    },
-    {
-      "title": "Samater1",
-      "id": 3
+      "title": "Nike",
+      "image": "https://picsum.photos/200/300",
+      "id": 5
     }
   ]
 }
