@@ -1,5 +1,6 @@
+import { PlusOutlined } from "@ant-design/icons";
 import { Edit, useForm } from "@refinedev/antd";
-import { Form, Input, Radio, Select } from "antd";
+import { Form, Input, Radio, Select, Upload } from "antd";
 
 export const ProductsEdit = () => {
   const { formProps, saveButtonProps } = useForm({});
@@ -45,6 +46,17 @@ export const ProductsEdit = () => {
         </Form.Item>
         <Form.Item label="Mô tả sản phẩm" name="description">
           <Input.TextArea rows={5} />
+        </Form.Item>
+        <Form.Item label="Ảnh sản phẩm" name="imageUrl">
+          <Upload
+            listType="picture-card"
+            beforeUpload={() => false} // Ngăn chặn upload tự động
+          >
+            <div>
+              <PlusOutlined />
+              <div style={{ marginTop: 8 }}>Upload</div>
+            </div>
+          </Upload>
         </Form.Item>
       </Form>
     </Edit>

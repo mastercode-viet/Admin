@@ -1,6 +1,6 @@
 import { Show, TextField } from "@refinedev/antd";
 import { useShow } from "@refinedev/core";
-import { Typography } from "antd";
+import { Typography, Image } from "antd";
 
 const { Title } = Typography;
 
@@ -24,6 +24,12 @@ export const ProductsShow = () => {
       <TextField value={record?.status} />
       <Title level={5}>{"Mô tả"}</Title>
       <TextField value={record?.description} />
+      {record?.imageUrl && (
+        <>
+          <Title level={5}>{"Ảnh sản phẩm"}</Title>
+          <Image src={record.imageUrl} width={150} />
+        </>
+      )}
     </Show>
   );
 };
