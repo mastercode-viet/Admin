@@ -15,16 +15,16 @@ export const CategoryEdit = () => {
 
   // Kiểm tra danh mục trước khi lưu
   const handleFinish = async (values: any) => {
-    const existingCategory = data?.data.find(
-      (category) =>
-        category.id !== id && // Bỏ qua danh mục đang chỉnh sửa
-        category.title.toLowerCase() === values.title.toLowerCase()
-    );
+    // const existingCategory = data?.data.find(
+    //   (category) =>
+    //     category.id !== id && // Bỏ qua danh mục đang chỉnh sửa
+    //     category.title.toLowerCase() === values.title.toLowerCase()
+    // );
 
-    if (existingCategory) {
-      message.error("Danh mục này đã tồn tại!");
-      return;
-    }
+    // if (existingCategory) {
+    //   message.error("Danh mục này đã tồn tại!");
+    //   return;
+    // }
 
     await onFinish(values);
   };
@@ -37,6 +37,15 @@ export const CategoryEdit = () => {
           name="title"
           rules={[
             { required: true, message: "Vui lòng nhập tên danh mục!" },
+          ]}
+        >
+          <Input />
+        </Form.Item>
+        <Form.Item
+          label="Image"
+          name="image"
+          rules={[
+            { required: true, message: "Vui lòng nhập ảnh!" },
           ]}
         >
           <Input />
