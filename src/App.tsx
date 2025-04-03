@@ -31,6 +31,7 @@ import ProductGrid from "./pages/home_client/products"
 import Detail from "./pages/detail_client/detail"
 import HomePage from "./pages/home_client/HomePage"
 import { Dashboard } from "./pages/dashboard/dashboard";
+import ShopPage from "./pages/Shop_client/shop"
 
 function App() {
   return (
@@ -86,6 +87,7 @@ function App() {
                 <Routes>
                   <Route element={<LayoutClient />}>
                     <Route index element={<HomePage />} />
+                    <Route path="/shop" element={<ShopPage />} />
                     <Route path="/home" element={<h1>Home</h1>} />
                     <Route path="/products" element={<ProductGrid />} />
                     <Route path="/products/:id" element={<Detail />} />
