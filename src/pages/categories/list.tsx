@@ -19,6 +19,17 @@ export const CategoryList = () => {
         <Table.Column dataIndex="id" title={"ID"} />
         <Table.Column dataIndex="title" title={"title"} />
         <Table.Column
+          dataIndex="image"
+          title={"Image"}
+          render={(image: string) => (
+            <img
+              src={image}
+              alt="category"
+              style={{ width: 50, height: 50, objectFit: "cover" }}
+            />
+          )}
+        />
+        <Table.Column
           title={"Actions"}
           dataIndex="actions"
           render={(_, record: BaseRecord) => (

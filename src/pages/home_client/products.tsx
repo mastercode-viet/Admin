@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { ProductActions } from "./products_action/ProductAction";
+
 import { useList } from "@refinedev/core";
 export const ProductGrid = () => {
   const [products, setProducts] = useState<any[]>([]);
@@ -45,9 +45,7 @@ export const ProductGrid = () => {
                     ? "opacity-75"
                     : "opacity-0 pointer-events-none"
                 }`}
-              >
-                <ProductActions />
-              </div>
+              ></div>
             </div>
             <div className="p-2 bg-gray-100">
               <h3 className="mb-1 text-2xl font-semibold text-neutral-700">
