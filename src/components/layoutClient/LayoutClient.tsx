@@ -1,16 +1,15 @@
 
-import React from 'react'
-import NewCollectionHero from '../layoutForm/Header'
 import { Outlet } from 'react-router-dom'
-import Footers from '../layoutForm/Footer'
+import Header from '../../pages/clients/Header'
+import Footer from '../../pages/clients/Footer'
 
 const LayoutClient = () => {
     return (
-        <div>
-            <NewCollectionHero />
+        <>
+            <Header />
             <Outlet />
-            <Footers />
-        </div>
+            <Footer />
+        </>
     )
 }
 

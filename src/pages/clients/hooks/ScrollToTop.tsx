@@ -5,7 +5,7 @@ const ScrollToTop = () => {
     const { pathname } = useLocation();
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 0); // Luôn cuộn lên đầu khi pathname thay đổi
     }, [pathname]);
 
     return null;
