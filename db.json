@@ -9,45 +9,45 @@
       "id": 2
     },
     {
-      "id": 3,
-      "title": "Abc 1213",
-      "price": "1212.5334",
-      "categories": "1",
-      "status": "Còn hàng",
-      "description": "abcdef",
-      "imageUrl": "https://picsum.photos/200/300",
-      "type": "simple",
-      "parent": 0
-    },
-    {
-      "id": 4,
-      "title": "sản phẩm 1 ",
-      "price": "123.222.222",
-      "categories": "2",
-      "status": "Còn hàng",
-      "description": "abc",
-      "imageUrl": "https://picsum.photos/200/300",
-      "type": "simple",
-      "parent": 0
-    },
-    {
-      "id": 5,
-      "title": "Tra sua lơn",
-      "price": "199.000",
-      "categories": "2",
-      "imageUrl": "https://picsum.photos/200/300",
-      "status": "Còn hàng",
-      "description": "ok ",
-      "type": "simple",
-      "parent": 0
-    },
-    {
       "title": "Smartphones & Tablets update",
       "price": "1000",
       "categories": "4",
       "status": "Còn hàng",
       "description": "rất đẹp\n\n",
       "id": 6
+    },
+    {
+      "id": 9,
+      "title": "ffđ",
+      "price": "47777",
+      "categories": "Adidas",
+      "status": "Còn hàng",
+      "description": "đasda",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqy9-wSKO8bjTmB0om_AKEekXrMhYoCUpl6A&s",
+      "type": "simple",
+      "parent": 0
+    },
+    {
+      "id": 10,
+      "title": "khdklfhsdklfhsd",
+      "price": "47777",
+      "categories": "Adidas",
+      "status": "Còn hàng",
+      "description": "dszffsdfds",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqy9-wSKO8bjTmB0om_AKEekXrMhYoCUpl6A&s",
+      "type": "simple",
+      "parent": 0
+    },
+    {
+      "id": 11,
+      "title": "dsadasdf",
+      "price": "44",
+      "categories": "Nike",
+      "status": "Còn hàng",
+      "description": "ưdawefa",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/210px-Manchester_United_FC_crest.svg.png",
+      "type": "simple",
+      "parent": 0
     }
   ],
   "variants": [],
@@ -88,14 +88,14 @@
   ],
   "categories": [
     {
-      "title": "Smartphones & Tablets ",
-      "image": "https://picsum.photos/200/300",
-      "id": 4
-    },
-    {
       "title": "Nike",
       "image": "https://picsum.photos/200/300",
       "id": 5
+    },
+    {
+      "title": "Adidas",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqy9-wSKO8bjTmB0om_AKEekXrMhYoCUpl6A&s",
+      "id": 6
     }
   ]
 }

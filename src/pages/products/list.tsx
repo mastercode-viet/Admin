@@ -23,6 +23,17 @@ export const ProductsList = () => {
         <Table.Column dataIndex="status" title={"Tình trạng"} />
         <Table.Column dataIndex="description" title={"Mô tả"} />
         <Table.Column
+          dataIndex="image"
+          title={"Ảnh"}
+          render={(image: string) => (
+            <img
+              src={image}
+              alt="category"
+              style={{ width: 50, height: 50, objectFit: "cover" }}
+            />
+          )}
+        />
+        <Table.Column
           title={"Actions"}
           dataIndex="actions"
           render={(_, record: BaseRecord) => (
