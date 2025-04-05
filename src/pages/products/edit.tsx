@@ -1,6 +1,10 @@
+import { PlusOutlined } from "@ant-design/icons";
 import { Edit, useForm } from "@refinedev/antd";
+
 import { useList } from "@refinedev/core";
 import { Form, Input, Radio, Select } from "antd";
+
+
 
 export const ProductsEdit = () => {
   const { formProps, saveButtonProps } = useForm({});
@@ -48,12 +52,15 @@ export const ProductsEdit = () => {
         <Form.Item label="Mô tả sản phẩm" name="description">
           <Input.TextArea rows={5} />
         </Form.Item>
+
         <Form.Item
           label="Image"
           name="image"
           rules={[{ required: true, message: "Vui lòng nhập ảnh!" }]}
         >
           <Input />
+
+
         </Form.Item>
       </Form>
     </Edit>

@@ -6,7 +6,7 @@ import {
   useTable,
 } from "@refinedev/antd";
 import type { BaseRecord } from "@refinedev/core";
-import { Space, Table } from "antd";
+import { Space, Table, Image } from "antd";
 
 export const ProductsList = () => {
   const { tableProps } = useTable({
@@ -23,6 +23,7 @@ export const ProductsList = () => {
         <Table.Column dataIndex="status" title={"Tình trạng"} />
         <Table.Column dataIndex="description" title={"Mô tả"} />
         <Table.Column
+
           dataIndex="image"
           title={"Ảnh"}
           render={(image: string) => (
@@ -32,6 +33,7 @@ export const ProductsList = () => {
               style={{ width: 50, height: 50, objectFit: "cover" }}
             />
           )}
+
         />
         <Table.Column
           title={"Actions"}

@@ -110,9 +110,15 @@ export const Navigation: React.FC = () => {
                     <ul className="flex gap-24 text-base font-medium text-black max-md:mt-10 max-md:max-w-full">
                         {menuItems.map((item) => (
                             <li key={item} className="relative group">
-                                <a
+                                <a        
                                     href={`#${item.toLowerCase()}`}
                                     className="hover:text-gray-600 transition-colors"
+                                    onClick={(e) => {
+                                        if (item === "Shop") {
+                                            e.preventDefault(); // Ngăn chặn hành vi mặc định của thẻ `<a>`
+                                            navigate("/shop"); // Chuyển hướng đến trang Shop
+                                        }
+                                    }}
                                 >
                                     {item}
                                 </a>
