@@ -1,16 +1,16 @@
 {
   "products": [
     {
-      "title": "việt nguuu l**",
+      "title": "Smartphones & Tablets ",
       "price": "838383",
-      "categories": "1",
+      "categories": "4",
       "status": "Hết hàng",
-      "description": "sdasdad",
+      "description": "Rat ok va dep ",
       "id": 2
     },
     {
       "id": 3,
-      "title": "Abc 1213",
+      "title": "Smartphones & Tablets ",
       "price": "1212.5334",
       "categories": "1",
       "status": "Còn hàng",
@@ -21,7 +21,7 @@
     },
     {
       "id": 4,
-      "title": "sản phẩm 1 ",
+      "title": "laptop ",
       "price": "123.222.222",
       "categories": "2",
       "status": "Còn hàng",
@@ -32,7 +32,7 @@
     },
     {
       "id": 5,
-      "title": "Tra sua lơn",
+      "title": "Tablet",
       "price": "199.000",
       "categories": "2",
       "imageUrl": "https://picsum.photos/200/300",
