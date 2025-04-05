@@ -10,46 +10,18 @@
       "description": "Rat ok va dep ",
       "id": 2
     },
+    
     {
-      "id": 3,
-      "title": "Smartphones & Tablets ",
-      "title": "San pham a",
+
+      "id": 10,
+      "title": "khdklfhsdklfhsd",
       "price": "47777",
-      "categories": "Máy ảnh",
-      "status": "Hết hàng",
-      "description": "asdfasfa",
-      "imageUrl": "https://picsum.photos/id/1/200/300",
-      "title": "Abc 1213",
-
-      "price": "1212.5334",
-      "categories": "1",
+      "categories": "Adidas",
       "status": "Còn hàng",
-      "description": "abcdef",
-      "imageUrl": "https://picsum.photos/200/300",
-      "type": "simple",
-      "parent": 0
-    },
-    {
-      "id": 3,
-      "title": "San pham a",
-      "price": "47777",
-      "categories": "Máy ảnh",
-      "status": "Hết hàng",
-      "description": "asdfasfa",
-      "imageUrl": "https://picsum.photos/id/1/200/300",
+      "description": "dszffsdfds",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqy9-wSKO8bjTmB0om_AKEekXrMhYoCUpl6A&s",
 
-      "id": 4,
-      "title": "laptop ",
-      "price": "123.222.222",
-      "categories": "2",
-      "status": "Còn hàng",
-      "description": "abc",
-      "imageUrl": "https://picsum.photos/200/300",
-
-      "type": "simple",
-      "parent": 0
-    },
-    {
+    },{
       "id": 3,
       "title": "San pham a",
       "price": "47777",
@@ -66,16 +38,20 @@
       "status": "Còn hàng",
       "description": "ok ",
 
+
       "type": "simple",
       "parent": 0
     },
     {
-      "title": "Smartphones & Tablets update",
-      "price": "1000",
-      "categories": "4",
+      "id": 11,
+      "title": "dsadasdf",
+      "price": "44",
+      "categories": "Nike",
       "status": "Còn hàng",
-      "description": "rất đẹp\n\n",
-      "id": 6
+      "description": "ưdawefa",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/210px-Manchester_United_FC_crest.svg.png",
+      "type": "simple",
+      "parent": 0
     }
   ],
   "variants": [],
@@ -116,6 +92,8 @@
   ],
   "categories": [
     {
+
+
       "title": "Máy in",
       "id": 1
     },
@@ -132,17 +110,23 @@
       "id": 4
     },
     {
-      "title": "Sạc iPhone",
+      
 
       "title": "Smartphones & Tablets ",
       "image": "https://picsum.photos/200/300",
       "id": 4
     },
     {
+
       "title": "Nike",
       "image": "https://picsum.photos/200/300",
 
       "id": 5
+    },
+    {
+      "title": "Adidas",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqy9-wSKO8bjTmB0om_AKEekXrMhYoCUpl6A&s",
+      "id": 6
     }
   ]
 }

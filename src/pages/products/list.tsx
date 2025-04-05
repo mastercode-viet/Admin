@@ -23,11 +23,17 @@ export const ProductsList = () => {
         <Table.Column dataIndex="status" title={"Tình trạng"} />
         <Table.Column dataIndex="description" title={"Mô tả"} />
         <Table.Column
-          dataIndex="imageUrl"
+
+          dataIndex="image"
           title={"Ảnh"}
-          render={(text) =>
-            text ? <Image src={text} width={50} /> : "Không có ảnh"
-          }
+          render={(image: string) => (
+            <img
+              src={image}
+              alt="category"
+              style={{ width: 50, height: 50, objectFit: "cover" }}
+            />
+          )}
+
         />
         <Table.Column
           title={"Actions"}
