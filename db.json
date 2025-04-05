@@ -1,81 +1,64 @@
 {
   "products": [
     {
-
-      "title": "Smartphones & Tablets ",
-
+      "title": "Smartphones & Tablets",
       "price": "838383",
       "categories": "4",
       "status": "Hết hàng",
-      "description": "Rat ok va dep ",
-      "id": 2
+      "description": "Rat ok va dep",
+      "id": 1,
+      "imageUrl": "https://picsum.photos/200/300"
     },
     {
-      "id": 3,
-      "title": "Smartphones & Tablets ",
-      "title": "San pham a",
+      "title": "Smartphones & Tablets",
       "price": "47777",
-      "categories": "Máy ảnh",
+      "categories": "2",
       "status": "Hết hàng",
       "description": "asdfasfa",
       "imageUrl": "https://picsum.photos/id/1/200/300",
+      "id": 2
+    },
+    {
       "title": "Abc 1213",
-
       "price": "1212.5334",
       "categories": "1",
       "status": "Còn hàng",
       "description": "abcdef",
       "imageUrl": "https://picsum.photos/200/300",
       "type": "simple",
-      "parent": 0
+      "parent": 0,
+      "id": 3
     },
     {
-      "id": 3,
-      "title": "San pham a",
-      "price": "47777",
-      "categories": "Máy ảnh",
-      "status": "Hết hàng",
-      "description": "asdfasfa",
-      "imageUrl": "https://picsum.photos/id/1/200/300",
-
-      "id": 4,
-      "title": "laptop ",
-      "price": "123.222.222",
+      "title": "laptop",
+      "price": "123222222",
       "categories": "2",
       "status": "Còn hàng",
       "description": "abc",
       "imageUrl": "https://picsum.photos/200/300",
-
       "type": "simple",
-      "parent": 0
+      "parent": 0,
+      "id": 4
     },
     {
-      "id": 3,
-      "title": "San pham a",
-      "price": "47777",
-      "categories": "Máy ảnh",
-      "status": "Hết hàng",
-      "description": "asdfasfa",
-      "imageUrl": "https://picsum.photos/id/1/200/300",
-
-      "id": 5,
       "title": "Tablet",
-      "price": "199.000",
+      "price": "199000",
       "categories": "2",
       "imageUrl": "https://picsum.photos/200/300",
       "status": "Còn hàng",
-      "description": "ok ",
-
+      "description": "ok",
       "type": "simple",
-      "parent": 0
+      "parent": 0,
+      "id": 5
     },
     {
       "title": "Smartphones & Tablets update",
       "price": "1000",
       "categories": "4",
       "status": "Còn hàng",
-      "description": "rất đẹp\n\n",
-      "id": 6
+      "description": "rất đẹp",
+      "id": 6,
+      "imageUrl": "https://picsum.photos/200/300"
     }
   ],
   "variants": [],
@@ -87,7 +70,7 @@
       "email": "kkk@gmail.com",
       "password": "$2a$10$DD2Y8MBMBpFNWZ4ubJC0y.2L3yAQ7R7yeYtfefg.22ETQPj8o9NM6",
       "username": "rachviet",
-      "address": "ha noi ",
+      "address": "ha noi",
       "phone": "0867031413",
       "status": "Inactive",
       "createdAt": "2025-03-24T08:42:19.393Z",
@@ -112,6 +95,20 @@
       "status": "active",
       "createdAt": "2025-03-28T07:59:38.732Z",
       "id": 13
+    },
+    {
+      "email": "hiha@gmail.com",
+      "password": "hiha@gmail.com",
+      "status": "active",
+      "createdAt": "2025-04-05T04:05:49.583Z",
+      "id": 14
+    },
+    {
+      "email": "john@example.com",
+      "password": "john@example.com",
+      "status": "active",
+      "createdAt": "2025-04-05T04:07:38.832Z",
+      "id": 15
     }
   ],
   "categories": [
@@ -132,17 +129,14 @@
       "id": 4
     },
     {
-      "title": "Sạc iPhone",
-
-      "title": "Smartphones & Tablets ",
+      "title": "Smartphones & Tablets",
       "image": "https://picsum.photos/200/300",
-      "id": 4
+      "id": 5
     },
     {
       "title": "Nike",
       "image": "https://picsum.photos/200/300",
-
-      "id": 5
+      "id": 6
     }
   ]
 }
