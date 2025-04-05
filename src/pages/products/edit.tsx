@@ -1,10 +1,14 @@
 import { PlusOutlined } from "@ant-design/icons";
 import { Edit, useForm } from "@refinedev/antd";
-import { Form, Input, Radio, Select, Upload } from "antd";
+
+import { useList } from "@refinedev/core";
+import { Form, Input, Radio, Select } from "antd";
+
+
 
 export const ProductsEdit = () => {
   const { formProps, saveButtonProps } = useForm({});
-
+  const { data } = useList({ resource: "categories" });
   return (
     <Edit saveButtonProps={saveButtonProps}>
       <Form {...formProps} layout="vertical">
@@ -32,10 +36,11 @@ export const ProductsEdit = () => {
         </Form.Item>
         <Form.Item label="Danh mục" name={["categories"]}>
           <Select defaultValue={"Chọn danh mục"}>
-            <Select.Option value="1">Điện thoại</Select.Option>
-            <Select.Option value="2">Laptop</Select.Option>
-            <Select.Option value="3">Tai nghe</Select.Option>
-            <Select.Option value="4">Máy ảnh</Select.Option>
+            {data?.data.map((item) => {
+              return (
+                <Select.Option value={item.title}>{item.title}</Select.Option>
+              );
+            })}
           </Select>
         </Form.Item>
         <Form.Item label="Tình trạng" name={["status"]}>
@@ -47,16 +52,15 @@ export const ProductsEdit = () => {
         <Form.Item label="Mô tả sản phẩm" name="description">
           <Input.TextArea rows={5} />
         </Form.Item>
-        <Form.Item label="Ảnh sản phẩm" name="imageUrl">
-          <Upload
-            listType="picture-card"
-            beforeUpload={() => false} // Ngăn chặn upload tự động
-          >
-            <div>
-              <PlusOutlined />
-              <div style={{ marginTop: 8 }}>Upload</div>
-            </div>
-          </Upload>
+
+        <Form.Item
+          label="Image"
+          name="image"
+          rules={[{ required: true, message: "Vui lòng nhập ảnh!" }]}
+        >
+          <Input />
+
+
         </Form.Item>
       </Form>
     </Edit>

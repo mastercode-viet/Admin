@@ -1,13 +1,16 @@
 import { Show, TextField } from "@refinedev/antd";
 import { useShow } from "@refinedev/core";
-import { Typography, Image } from "antd";
+
+import { Image, Typography } from "antd";
+
+
 
 const { Title } = Typography;
 
 export const ProductsShow = () => {
   const { queryResult } = useShow({});
   const { data, isLoading } = queryResult;
-
+  console.log(data);
   const record = data?.data;
 
   return (
@@ -24,12 +27,10 @@ export const ProductsShow = () => {
       <TextField value={record?.status} />
       <Title level={5}>{"Mô tả"}</Title>
       <TextField value={record?.description} />
-      {record?.imageUrl && (
-        <>
-          <Title level={5}>{"Ảnh sản phẩm"}</Title>
-          <Image src={record.imageUrl} width={150} />
-        </>
-      )}
+
+      <Title level={5}>{"Ảnh"}</Title>
+      <Image width={200} height={200} src="error" fallback={record?.image} />
+
     </Show>
   );
 };

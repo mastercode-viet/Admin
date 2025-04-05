@@ -9,7 +9,9 @@
       "id": 1,
       "imageUrl": "https://picsum.photos/200/300"
     },
+    
     {
+
       "title": "Smartphones & Tablets",
       "price": "47777",
       "categories": "2",
@@ -41,24 +43,29 @@
       "id": 4
     },
     {
+
       "title": "Tablet",
       "price": "199000",
       "categories": "2",
       "imageUrl": "https://picsum.photos/200/300",
       "status": "Còn hàng",
+
       "description": "ok",
+
       "type": "simple",
       "parent": 0,
       "id": 5
     },
     {
-      "title": "Smartphones & Tablets update",
-      "price": "1000",
-      "categories": "4",
+    
+      "title": "dsadasdf",
+      "price": "44",
+      "categories": "Nike",
       "status": "Còn hàng",
       "description": "rất đẹp",
       "id": 6,
       "imageUrl": "https://picsum.photos/200/300"
+
     }
   ],
   "variants": [],
@@ -113,6 +120,8 @@
   ],
   "categories": [
     {
+
+
       "title": "Máy in",
       "id": 1
     },
@@ -130,6 +139,7 @@
     },
     {
       "title": "Smartphones & Tablets",
+
       "image": "https://picsum.photos/200/300",
       "id": 5
     },
