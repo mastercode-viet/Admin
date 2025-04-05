@@ -27,11 +27,14 @@ import { UsersList } from "./pages/users/list"
 import { UserEdit, UserShow } from "./pages/users"
 import { ProductsList, ProductsCreate, ProductsEdit, ProductsShow } from "./pages/products"
 import LayoutClient from "./components/layoutClient/LayoutClient"
-import ProductGrid from "./pages/home_client/products"
-import Detail from "./pages/detail_client/detail"
-import HomePage from "./pages/home_client/HomePage"
 import { Dashboard } from "./pages/dashboard/dashboard";
+
 import ShopPage from "./pages/Shop_client/shop"
+
+import Home from "./pages/clients/Home"
+import Detail from "./pages/clients/Detail"
+import ScrollToTop from "./pages/clients/hooks/ScrollToTop"
+
 
 function App() {
   return (
@@ -84,13 +87,17 @@ function App() {
                   projectId: "0GhN8h-KHSJOg-62gDNs",
                 }}
               >
+                <ScrollToTop />
                 <Routes>
                   <Route element={<LayoutClient />}>
+
                     <Route index element={<HomePage />} />
                     <Route path="/shop" element={<ShopPage />} />
                     <Route path="/home" element={<h1>Home</h1>} />
                     <Route path="/products" element={<ProductGrid />} />
-                    <Route path="/products/:id" element={<Detail />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/detail/:id" element={<Detail />} />
+
                   </Route>
 
                   <Route

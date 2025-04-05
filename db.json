@@ -1,16 +1,26 @@
 {
   "products": [
     {
-      "title": "oubuib",
+
+      "title": "Smartphones & Tablets ",
+
       "price": "838383",
-      "categories": "1",
+      "categories": "4",
       "status": "Hết hàng",
-      "description": "sdasdad",
+      "description": "Rat ok va dep ",
       "id": 2
     },
     {
       "id": 3,
+      "title": "Smartphones & Tablets ",
+      "title": "San pham a",
+      "price": "47777",
+      "categories": "Máy ảnh",
+      "status": "Hết hàng",
+      "description": "asdfasfa",
+      "imageUrl": "https://picsum.photos/id/1/200/300",
       "title": "Abc 1213",
+
       "price": "1212.5334",
       "categories": "1",
       "status": "Còn hàng",
@@ -20,24 +30,42 @@
       "parent": 0
     },
     {
+      "id": 3,
+      "title": "San pham a",
+      "price": "47777",
+      "categories": "Máy ảnh",
+      "status": "Hết hàng",
+      "description": "asdfasfa",
+      "imageUrl": "https://picsum.photos/id/1/200/300",
+
       "id": 4,
-      "title": "sản phẩm 1 ",
+      "title": "laptop ",
       "price": "123.222.222",
       "categories": "2",
       "status": "Còn hàng",
       "description": "abc",
       "imageUrl": "https://picsum.photos/200/300",
+
       "type": "simple",
       "parent": 0
     },
     {
+      "id": 3,
+      "title": "San pham a",
+      "price": "47777",
+      "categories": "Máy ảnh",
+      "status": "Hết hàng",
+      "description": "asdfasfa",
+      "imageUrl": "https://picsum.photos/id/1/200/300",
+
       "id": 5,
-      "title": "Tra sua lơn",
+      "title": "Tablet",
       "price": "199.000",
       "categories": "2",
       "imageUrl": "https://picsum.photos/200/300",
       "status": "Còn hàng",
       "description": "ok ",
+
       "type": "simple",
       "parent": 0
     },
@@ -88,6 +116,24 @@
   ],
   "categories": [
     {
+      "title": "Máy in",
+      "id": 1
+    },
+    {
+      "title": "Máy ảnh",
+      "id": 2
+    },
+    {
+      "title": "Laptop",
+      "id": 3
+    },
+    {
+      "title": "Điện thoại",
+      "id": 4
+    },
+    {
+      "title": "Sạc iPhone",
+
       "title": "Smartphones & Tablets ",
       "image": "https://picsum.photos/200/300",
       "id": 4
@@ -95,6 +141,7 @@
     {
       "title": "Nike",
       "image": "https://picsum.photos/200/300",
+
       "id": 5
     }
   ]

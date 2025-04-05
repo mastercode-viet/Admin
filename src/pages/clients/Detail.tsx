@@ -1,47 +1,30 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import { useShow, useMany } from '@refinedev/core';
 import { useParams } from 'react-router-dom';
-
-type Product = {
-    id: number;
-    name: string;
-    imageUrl: string;
-    price: number;
-    description: string;
-    description_sort: string;
-};
 
 const Detail = () => {
     const { id } = useParams(); // Get product ID from URL
-    const [product, setProduct] = useState<Product | null>(null);
-    const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
-    const [loading, setLoading] = useState(true);
+    const { queryResult: productQuery } = useShow({
+        resource: 'products',
+        id,
+    });
 
-    useEffect(() => {
-        async function fetchProduct() {
-            try {
-                const { data } = await axios.get(`http://localhost:3000/products/${id}`);
-                setProduct(data);
-                const relatedRes = await axios.get(`http://localhost:3000/products`);
-                const related = relatedRes.data.filter((p: Product) => p.id !== Number(id));
-                setRelatedProducts(related.slice(0, 4)); 
-            } catch (error) {
-                console.error("Error fetching product", error);
-            } finally {
-                setLoading(false);
-            }
-        }
+    const product = productQuery?.data?.data;
+    const { data: relatedProductsData, isLoading: relatedProductsLoading } = useMany({
+        resource: 'products',
+        ids: product ? product.relatedIds || [] : [],
+    });
 
-        fetchProduct();
-    }, [id]);
+    const relatedProducts = relatedProductsData?.data || [];
+    const isLoading = productQuery.isLoading || relatedProductsLoading;
 
-    if (loading) {
+    if (isLoading) {
         return <p className="text-center">Loading...</p>;
     }
 
     if (!product) {
         return <p className="text-center">Product not found</p>;
     }
+
     return (
         <div className="overflow-hidden pb-12 bg-white">
             <nav className="flex gap-3.5 items-center px-20 py-8 mt-3.5 text-base bg-orange-50 text-neutral-400 max-md:px-5">
@@ -49,77 +32,56 @@ const Detail = () => {
                 <img src="https://cdn.builder.io/api/v1/image/assets/fade7a66245c4bb8b027677c62a79354/db13939cabd153a09de09c25864d1f622bda5d116dbe6552d6605aca283c27a4?placeholderIfAbsent=true" alt="Breadcrumb separator" className="object-contain w-5 aspect-square" />
                 <a href="#" className="hover:text-yellow-600">Shop</a>
                 <img src="https://cdn.builder.io/api/v1/image/assets/fade7a66245c4bb8b027677c62a79354/db13939cabd153a09de09c25864d1f622bda5d116dbe6552d6605aca283c27a4?placeholderIfAbsent=true" alt="Breadcrumb separator" className="object-contain w-5 aspect-square" />
-                <a href="#" className="hover:text-yellow-600"> {product.title || product.name}</a>
-                
+                <a href="#" className="hover:text-yellow-600">{product.title}</a>
             </nav>
             <div>
                 <main className="flex flex-col items-center px-20 pt-9 pb-14 w-full bg-white max-md:px-5 max-md:pb-24 max-md:max-w-full">
                     <section className="self-start w-full max-w-[1217px] max-md:max-w-full">
                         <div className="flex gap-5 max-md:flex-col">
                             <div className="w-6/12 max-md:ml-0 max-md:w-full">
-                                <div className="flex gap-8">
-                                    <div className="flex flex-col gap-8">
-                                        <img src={product.imageUrl} alt="Sofa thumbnail 1" className="w-[75px] h-[75px] object-cover bg-[#F9F1E7] rounded-lg" />
-                                        <img src={product.imageUrl} alt="Sofa thumbnail 1" className="w-[75px] h-[75px] object-cover bg-[#F9F1E7] rounded-lg" />
-                                        <img src={product.imageUrl} alt="Sofa thumbnail 1" className="w-[75px] h-[75px] object-cover bg-[#F9F1E7] rounded-lg" />
-                                        <img src={product.imageUrl} alt="Sofa thumbnail 1" className="w-[75px] h-[75px] object-cover bg-[#F9F1E7] rounded-lg" />
-                                    </div>
-                                    <div className="w-full max-w-[600px] ">
-                                        <img src={product.imageUrl} alt="Asgaard sofa" className="w-full h-[510px] object-cover bg-[#F9F1E7] rounded-lg" />
-                                    </div>
-                                </div>
+                                <img src={product.imageUrl} alt={product.title} className="w-full h-[510px] object-cover bg-[#F9F1E7] rounded-lg" />
                             </div>
                             <article className="ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-                                <div className="flex flex-col items-start w-full max-md:mt-10 max-md:max-w-full">
-                                    <h1 className="text-5xl text-black mb-5">{product.title || product.name}</h1>
-                                    <p className="text-2xl font-medium text-neutral-400">{product.price}</p>
-                                    <div className="flex gap-5 items-center mt-2.5 text-sm text-neutral-400">
-                                        <img src="https://cdn.builder.io/api/v1/image/assets/fade7a66245c4bb8b027677c62a79354/35cb519968837ecbbf7790f3c128da597ab6c33dd10c0353875022f7f2dc3781?placeholderIfAbsent=true" alt="Rating stars" className="object-contain max-w-full aspect-[6.21] w-[124px]" />
-                                        <div className="shrink-0 self-stretch w-px border border-solid border-neutral-400 h-[30px]">
-                                        </div>
-                                        <p>5 Customer Review</p>
-                                    </div>
-                                    <p className="mt-auto text-sm text-black whitespace-pre-line">
-                                        {product.description}
-                                    </p>
-                                    <div className="mt-5">
-                                        <label className="text-sm text-neutral-400">Size</label>
-                                        <div className="flex gap-4 mt-3 text-sm text-black whitespace-nowrap">
-                                            <button className="px-3 text-white bg-yellow-600 rounded-md h-[30px] w-[30px]">
-                                                L
-                                            </button>
-                                            <button className="px-2 bg-orange-50 rounded-md h-[30px] w-[30px]">
-                                                XL
-                                            </button>
-                                            <button className="px-2 bg-orange-50 rounded-md h-[30px] w-[30px]">
-                                                XS
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div className="mt-5">
-                                        <label className="text-sm text-neutral-400">Color</label>
-                                        <div className="flex gap-4 mt-3">
-                                            <button aria-label="Purple color" className="flex shrink-0 bg-violet-500 h-[30px] rounded-[50px] w-[30px]">
-                                            </button><button aria-label="Black color" className="flex shrink-0 bg-black h-[30px] rounded-[50px] w-[30px]">
-                                            </button><button aria-label="Yellow color" className="flex shrink-0 bg-yellow-600 h-[30px] rounded-[50px] w-[30px]">
-                                            </button></div>
-                                    </div>
-                                    <div className="flex flex-wrap gap-2.5 self-stretch mt-8 w-full text-black max-md:max-w-full">
-                                        <div className="flex gap-9 px-4 py-5 text-base whitespace-nowrap bg-white rounded-xl border border-solid border-neutral-400">
-                                            <button className="hover:text-yellow-600">-</button>
-                                            <span className="font-medium">1</span>
-                                            <button className="hover:text-yellow-600">+</button>
-                                        </div>
-                                        <button className="px-12 py-4 text-xl rounded-2xl border border-black border-solid hover:bg-yellow-600 hover:text-white max-md:px-5">
-                                            Add To Cart
+                                <h1 className="text-5xl text-black mb-5">{product.title}</h1>
+                                <p className="text-2xl font-medium text-neutral-400">{product.price}</p>
+                                <p className="mt-auto text-sm text-black whitespace-pre-line">{product.description}</p>
+                                <div className="mt-5">
+                                    <label className="text-sm text-neutral-400">Size</label>
+                                    <div className="flex gap-4 mt-3 text-sm text-black whitespace-nowrap">
+                                        <button className="px-3 text-white bg-yellow-600 rounded-md h-[30px] w-[30px]">
+                                            L
                                         </button>
-                                        <button className="flex flex-col justify-center px-12 py-4 whitespace-nowrap rounded-2xl border border-black border-solid hover:bg-yellow-600 hover:text-white max-md:px-5">
-                                            <div className="flex gap-2.5 justify-center items-center">
-                                                <span className="self-stretch my-auto text-2xl">+</span>
-                                                <span className="self-stretch my-auto text-xl">Compare</span>
-                                            </div>
+                                        <button className="px-2 bg-orange-50 rounded-md h-[30px] w-[30px]">
+                                            XL
+                                        </button>
+                                        <button className="px-2 bg-orange-50 rounded-md h-[30px] w-[30px]">
+                                            XS
                                         </button>
                                     </div>
+                                </div>
+                                <div className="mt-5">
+                                    <label className="text-sm text-neutral-400">Color</label>
+                                    <div className="flex gap-4 mt-3">
+                                        <button aria-label="Purple color" className="flex shrink-0 bg-violet-500 h-[30px] rounded-[50px] w-[30px]">
+                                        </button><button aria-label="Black color" className="flex shrink-0 bg-black h-[30px] rounded-[50px] w-[30px]">
+                                        </button><button aria-label="Yellow color" className="flex shrink-0 bg-yellow-600 h-[30px] rounded-[50px] w-[30px]">
+                                        </button></div>
+                                </div>
+                                <div className="flex flex-wrap gap-2.5 self-stretch mt-8 w-full text-black max-md:max-w-full">
+                                    <div className="flex gap-9 px-4 py-5 text-base whitespace-nowrap bg-white rounded-xl border border-solid border-neutral-400">
+                                        <button className="hover:text-yellow-600">-</button>
+                                        <span className="font-medium">1</span>
+                                        <button className="hover:text-yellow-600">+</button>
+                                    </div>
+                                    <button className="px-12 py-4 text-xl rounded-2xl border border-black border-solid hover:bg-yellow-600 hover:text-white max-md:px-5">
+                                        Add To Cart
+                                    </button>
+                                    <button className="flex flex-col justify-center px-12 py-4 whitespace-nowrap rounded-2xl border border-black border-solid hover:bg-yellow-600 hover:text-white max-md:px-5">
+                                        <div className="flex gap-2.5 justify-center items-center">
+                                            <span className="self-stretch my-auto text-2xl">+</span>
+                                            <span className="self-stretch my-auto text-xl">Compare</span>
+                                        </div>
+                                    </button>
                                 </div>
                             </article>
                         </div>
@@ -188,7 +150,7 @@ const Detail = () => {
                                     <span className="absolute top-6 right-7 px-px w-12 h-12 bg-red-400 rounded-full flex items-center justify-center text-base font-medium text-white">-30%</span>
                                 </div>
                                 <div className="flex flex-col items-start px-4 pt-4 pb-8 w-full bg-gray-100">
-                                    <h3 className="text-2xl font-semibold leading-tight text-neutral-700">{item.name}</h3>
+                                    <h3 className="text-2xl font-semibold leading-tight text-neutral-700">{item.title}</h3>
                                     <p className="mt-2 text-base font-medium text-zinc-500">{item.description_sort}</p>
                                     <div className="flex gap-4 items-center self-stretch mt-2">
                                         <span className="text-xl font-semibold text-neutral-700">{item.price} VND</span>
@@ -203,7 +165,7 @@ const Detail = () => {
                 </section>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Detail
+export default Detail;
