@@ -28,9 +28,13 @@ import { UserEdit, UserShow } from "./pages/users"
 import { ProductsList, ProductsCreate, ProductsEdit, ProductsShow } from "./pages/products"
 import LayoutClient from "./components/layoutClient/LayoutClient"
 import { Dashboard } from "./pages/dashboard/dashboard";
+
+import ShopPage from "./pages/Shop_client/shop"
+
 import Home from "./pages/clients/Home"
 import Detail from "./pages/clients/Detail"
 import ScrollToTop from "./pages/clients/hooks/ScrollToTop"
+
 
 function App() {
   return (
@@ -86,8 +90,14 @@ function App() {
                 <ScrollToTop />
                 <Routes>
                   <Route element={<LayoutClient />}>
+
+                    <Route index element={<HomePage />} />
+                    <Route path="/shop" element={<ShopPage />} />
+                    <Route path="/home" element={<h1>Home</h1>} />
+                    <Route path="/products" element={<ProductGrid />} />
                     <Route path="/" element={<Home />} />
                     <Route path="/detail/:id" element={<Detail />} />
+
                   </Route>
 
                   <Route
