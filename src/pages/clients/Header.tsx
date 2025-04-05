@@ -13,16 +13,16 @@ const Header = () => {
                     </div>
                     <nav className="flex gap-20 max-md:gap-10 max-sm:hidden" aria-label="Main navigation">
                         <a href="/" className="text-base font-medium text-black cursor-pointer">Home</a>
-                        <a href="#" className="text-base font-medium text-black cursor-pointer">Shop</a>
+                        <a href="/shop" className="text-base font-medium text-black cursor-pointer">Shop</a>
                         <a href="#" className="text-base font-medium text-black cursor-pointer">About</a>
                         <a href="#" className="text-base font-medium text-black cursor-pointer">Contact</a>
                     </nav>
                     <div className="flex gap-11 items-center max-sm:gap-5" aria-label="User actions">
-                        <button aria-label="Account" className="p-1" >
+                    <a href="/login" aria-label="Account" className="p-1">
                             <svg width={28} height={28} viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M23.3333 14.0001V8.16675H25.6666V15.1667H23.3333M23.3333 19.8334H25.6666V17.5001H23.3333M11.6666 15.1667C14.7816 15.1667 21 16.7301 21 19.8334V23.3334H2.33331V19.8334C2.33331 16.7301 8.55165 15.1667 11.6666 15.1667ZM11.6666 4.66675C12.9043 4.66675 14.0913 5.15841 14.9665 6.03358C15.8416 6.90875 16.3333 8.09574 16.3333 9.33341C16.3333 10.5711 15.8416 11.7581 14.9665 12.6332C14.0913 13.5084 12.9043 14.0001 11.6666 14.0001C10.429 14.0001 9.24198 13.5084 8.36682 12.6332C7.49164 11.7581 6.99998 10.5711 6.99998 9.33341C6.99998 8.09574 7.49164 6.90875 8.36682 6.03358C9.24198 5.15841 10.429 4.66675 11.6666 4.66675ZM11.6666 17.3834C8.20165 17.3834 4.54998 19.0867 4.54998 19.8334V21.1167H18.7833V19.8334C18.7833 19.0867 15.1316 17.3834 11.6666 17.3834ZM11.6666 6.88341C11.0169 6.88341 10.3937 7.14154 9.93424 7.601C9.47477 8.06047 9.21665 8.68363 9.21665 9.33341C9.21665 9.98319 9.47477 10.6064 9.93424 11.0658C10.3937 11.5253 11.0169 11.7834 11.6666 11.7834C12.3164 11.7834 12.9396 11.5253 13.3991 11.0658C13.8585 10.6064 14.1166 9.98319 14.1166 9.33341C14.1166 8.68363 13.8585 8.06047 13.3991 7.601C12.9396 7.14154 12.3164 6.88341 11.6666 6.88341Z" fill="black" />
                             </svg>
-                        </button>
+                        </a>
                         <button aria-label="Search" className="p-1">
                             <svg width={28} height={28} viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M24.5 24.4999L19.2663 19.2569M22.1667 12.2499C22.1667 14.88 21.1219 17.4023 19.2622 19.2621C17.4024 21.1218 14.8801 22.1666 12.25 22.1666C9.61995 22.1666 7.0976 21.1218 5.23787 19.2621C3.37813 17.4023 2.33334 14.88 2.33334 12.2499C2.33334 9.61985 3.37813 7.09751 5.23787 5.23778C7.0976 3.37804 9.61995 2.33325 12.25 2.33325C14.8801 2.33325 17.4024 3.37804 19.2622 5.23778C21.1219 7.09751 22.1667 9.61985 22.1667 12.2499V12.2499Z" stroke="black" strokeWidth={2} strokeLinecap="round" />

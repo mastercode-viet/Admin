@@ -20,8 +20,8 @@ import { ColorModeContextProvider } from "./contexts/color-mode"
 
 import { CategoryCreate, CategoryEdit, CategoryList, CategoryShow } from "./pages/categories"
 import { ForgotPassword } from "./pages/forgotPassword"
-import { Login } from "./pages/login"
-import { Register } from "./pages/register"
+import { Login } from "./pages/auth/login"
+
 import { UserCreate } from "./pages/users/create"
 import { UsersList } from "./pages/users/list"
 import { UserEdit, UserShow } from "./pages/users"
@@ -34,6 +34,8 @@ import ShopPage from "./pages/Shop_client/shop"
 import Home from "./pages/clients/Home"
 import Detail from "./pages/clients/Detail"
 import ScrollToTop from "./pages/clients/hooks/ScrollToTop"
+import ProductGrid from "./pages/home_client/products"
+import { Register } from "./pages/auth/register"
 
 
 function App() {
@@ -90,8 +92,7 @@ function App() {
                 <ScrollToTop />
                 <Routes>
                   <Route element={<LayoutClient />}>
-
-                    <Route index element={<HomePage />} />
+                    {/* <Route index element={<HomePage />} /> */}
                     <Route path="/shop" element={<ShopPage />} />
                     <Route path="/home" element={<h1>Home</h1>} />
                     <Route path="/products" element={<ProductGrid />} />
